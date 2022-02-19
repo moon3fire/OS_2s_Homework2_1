@@ -21,7 +21,6 @@ void* PrintPing(void*)
 {
     pthread_mutex_lock(&mutex);
     std::cout<<"Ping"<<std::endl;
-    sleep(1);
     isReady = true;
     pthread_cond_signal(&isReadyToPrint);
     pthread_mutex_unlock(&mutex);
